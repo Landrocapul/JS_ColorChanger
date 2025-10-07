@@ -15,47 +15,72 @@ body {
 .container {
     border: 2px solid #ffffff;
     padding: 30px;
-    border-radius: 15px;
+    border-radius: 20px; /* Slightly more rounded corners */
     background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
-    backdrop-filter: blur(10px); /* Blur effect for the background */
-    max-width: 400px; /* Limit container width */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Increased shadow for better depth */
+    backdrop-filter: blur(15px); /* Blur effect for the background */
+    max-width: 450px; /* Slightly larger container for more spacious design */
+    width: 100%;
     text-align: center;
 }
 
 /* Heading Style */
 h1 {
-    font-size: 2.5rem; /* Slightly larger font size for readability */
+    font-size: 2.8rem; /* Larger font size for more impact */
+    margin-bottom: 1rem; /* Space below the heading */
+    font-weight: 600; /* Slightly bolder font for better visibility */
 }
 
 /* Color Code Display Style */
 #colorCode {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     letter-spacing: 1px;
+    font-weight: 500;
     transition: color 0.3s ease; /* Smooth transition for color change */
 }
 
 /* Button Styling */
 button {
-    font-size: 18px;
-    padding: 15px 30px;
-    border-radius: 10px;
+    font-size: 1.2rem; /* Responsive font size */
+    padding: 16px 32px; /* Larger padding for better interaction */
+    border-radius: 12px; /* Rounded button corners */
     background-color: #007bff;
     color: white;
     border: none;
+    outline: none; /* Remove outline on focus for cleaner UI */
+    cursor: pointer;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Light shadow for depth */
 }
 
 button:hover {
-    background-color: #4e73df; /* Slightly darker color on hover */
-    transform: scale(1.1); /* Slight scale effect on hover */
-    cursor: pointer;
+    background-color: #0056b3; /* Darker color on hover for better feedback */
+    transform: scale(1.05); /* Slight scale effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
 }
 
-/* Button Disabled State */
+button:active {
+    transform: scale(1.02); /* Slightly smaller scale on click for pressed effect */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15); /* Smaller shadow on active */
+}
+
 button:disabled {
     background-color: #d6d6d6;
     cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* Color Code Display (when the color code changes) */
+#colorCode {
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+/* Focus State for Button */
+button:focus {
+    outline: 2px solid #007bff; /* Adding focus outline for accessibility */
 }
 
 /* Responsive adjustments for smaller screens */
@@ -66,11 +91,15 @@ button:disabled {
     }
 
     h1 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     button {
-        font-size: 16px;
-        padding: 12px 25px;
+        font-size: 1rem;
+        padding: 14px 28px; /* Slightly smaller padding on mobile */
+    }
+
+    #colorCode {
+        font-size: 1rem;
     }
 }
