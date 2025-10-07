@@ -1,22 +1,76 @@
-/* Custom CSS */
+/* General Body Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #6e7dff, #a3a3ff); /* Soft gradient background */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f8f9fa;
+    color: #fff;
+    transition: background-color 0.5s ease; /* Smooth transition for background color */
 }
 
+/* Container Styling */
 .container {
-    border: 2px solid #333;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+    backdrop-filter: blur(10px); /* Blur effect for the background */
+    max-width: 400px; /* Limit container width */
+    text-align: center;
 }
 
+/* Heading Style */
+h1 {
+    font-size: 2.5rem; /* Slightly larger font size for readability */
+}
+
+/* Color Code Display Style */
 #colorCode {
-    font-size: 20px;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+/* Button Styling */
+button {
+    font-size: 18px;
+    padding: 15px 30px;
+    border-radius: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #4e73df; /* Slightly darker color on hover */
+    transform: scale(1.1); /* Slight scale effect on hover */
+    cursor: pointer;
+}
+
+/* Button Disabled State */
+button:disabled {
+    background-color: #d6d6d6;
+    cursor: not-allowed;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 576px) {
+    .container {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 12px 25px;
+    }
 }
